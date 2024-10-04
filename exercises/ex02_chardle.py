@@ -4,11 +4,12 @@ __author__ = "730809199"
 
 
 def main() -> None:
+    """main function calls all the other functions at once."""
     contains_char(word=input_word(), letter=input_letter())
 
 
 def input_word() -> str:
-    """function to ask what word to be entered(5 letters)"""
+    """Function is used to ask what word to be entered(5 letters) otherwise an error message occurs and module is exited."""
     word_input: str = str(input("Enter a 5-character word: "))
     if len(word_input) == 5:
         return word_input
@@ -19,6 +20,7 @@ def input_word() -> str:
 
 
 def input_letter() -> str:
+    """This function serves to ask the user to input a letter, and if it is more than one charcter an error message is given and the module is exited."""
     letter_input: str = str(input("Enter a single character: "))
     if len(letter_input) == 1:
         return letter_input
@@ -33,6 +35,7 @@ def input_letter() -> str:
 
 
 def contains_char(word: str, letter: str) -> None:
+    """This function is to check if the inputted letter is within the inputted word."""
     # Had a little trouble figuring out how to make the parameters local variables or if
     # that would just be the arguments when calling the function.
     # Accidentally put the if statement and error print output for the single character
