@@ -5,6 +5,8 @@ __author__ = "730809199"
 
 def all(list: list[int], num: int) -> bool:
     """returns True or False if all numbers in the list match the given integer"""
+    if len(list) == 0:
+        return False
     for nums in list:
         if num != nums:
             return False
@@ -35,6 +37,8 @@ def is_equal(list_1: list[int], list_2: list[int]) -> bool:
     """Returns true or false whether the two lists of int values are equal at every index."""
     idx: int = 0
     result: bool = False
+    if len(list_1) == 0 and len(list_2) == 0:
+        return True
     if len(list_1) == len(list_2):
         while idx < len(list_1):
             if list_1[idx] == list_2[idx]:
